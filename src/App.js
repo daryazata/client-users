@@ -63,9 +63,16 @@ function App() {
   };
 
   const formatCountries = () => {
-    return users.map((user) => {
-      return { value: user.location.country, label: user.location.country };
+    const duplicateCountries = users.map((user) => {
+      return user.location.country;
     });
+
+    const uniqueCountries = [...new Set(duplicateCountries)];
+
+    const result = uniqueCountries.map((country) => {
+      return { value: country, label: country };
+    });
+    return result;
   };
 
   const displayUsers = () => {
