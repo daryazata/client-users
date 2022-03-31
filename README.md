@@ -10,6 +10,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### deployment
+## deployment
 
 will be implemented soon...
+
+## backend repo
+
+https://github.com/daryazata/random_users-server
