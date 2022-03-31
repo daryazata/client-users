@@ -74,8 +74,10 @@ function App() {
       return (
         <div className='user-list-container' key={index}>
           <div className='user-list-name'>{`${user.name.first} ${user.name.last}`}</div>
-          <div className='user-list-name user-list-country'>
-            {' '}
+          <div className='user-list-details'>{`${user.gender}`}</div>
+          <div className='user-list-details'>{` ${user.email}`}</div>
+
+          <div className='user-list-details user-list-country'>
             {user.location.country}
           </div>
           <br />

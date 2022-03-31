@@ -23,6 +23,10 @@
 }
 .user-list-name {
   padding: 0.5rem;
+  color: rgb(122, 119, 157);
+}
+.user-list-details {
+  padding: 0.5rem;
 }
 
 .user-list-country {
