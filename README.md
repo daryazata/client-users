@@ -1,19 +1,11 @@
-## Random Users-Countries Filter UI
+## Random Users-Countries Filter App
 
-In the project directory, you can run:
+Tiny React-Node app that fetches randomusers api
+[randomusers api](https://randomuser.me/api)
+and filters users by countries. [Node cron](https://github.com/node-cron/node-cron) library enables periodical refetch (every 30 sec).
 
-### `npm start`
+### Dopleyment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Doployed on Heroku Server
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-## deployment
-
-will be implemented soon...
-
-## backend repo
-
-https://github.com/daryazata/random_users-server
+https://serene-shelf-82506.herokuapp.com/
