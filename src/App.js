@@ -14,11 +14,11 @@ function App() {
   const DEV_URL = 'http://localhost:8080/api/users';
   const PROD_URL = 'https://serene-shelf-82506.herokuapp.com/api/users';
 
-  const url = process.env.NODE_ENV === 'development' ? DEV_URL : PROD_URL;
+  const URL = process.env.NODE_ENV === 'development' ? DEV_URL : PROD_URL;
 
   const fetchData = () => {
     axios
-      .get(`${url}/api/users`)
+      .get(URL)
       .then(function (response) {
         const fetchedData = response.data.data.users.results;
         setUsers(fetchedData);
