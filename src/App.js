@@ -3,9 +3,6 @@ import './App.css';
 import { useEffect } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
-import dotenv from 'dotenv';
-
-dotenv.config();
 
 function App() {
   const [users, setUsers] = useState([]);
