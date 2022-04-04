@@ -2,6 +2,7 @@ const express = require('express');
 const request = require('request-promise');
 const cron = require('node-cron');
 const cache = require('memory-cache');
+const path = require('path');
 const cors = require('cors');
 
 const options = {
@@ -41,7 +42,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static(__dirname, './build'));
+app.use(express.static(path.join(__dirname, './build')));
 
 // middleware collects cached data into request
 app.use((req, res, next) => {
