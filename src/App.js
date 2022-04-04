@@ -13,13 +13,12 @@ function App() {
 
   const host =
     process.env.NODE_ENV === 'development'
-      ? 'localhost'
+      ? 'localhost:8080'
       : 'serene-shelf-82506.herokuapp.com';
-  const port = process.env.PORT || 8080;
 
   const fetchData = () => {
     axios
-      .get(`http://${host}:${port}/api/users`)
+      .get(`http://${host}/api/users`)
       .then(function (response) {
         const fetchedData = response.data.data.users.results;
         setUsers(fetchedData);
