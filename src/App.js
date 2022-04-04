@@ -11,10 +11,10 @@ function App() {
 
   const selectRef = useRef(null);
 
-  const url =
-    process.env.NODE_ENV === 'development'
-      ? process.env.REACT_BASE_URL
-      : process.env.HEROKU_URL;
+  const DEV_URL = 'http://localhost:8080/api/users';
+  const PROD_URL = 'https://serene-shelf-82506.herokuapp.com/api/users';
+
+  const url = process.env.NODE_ENV === 'development' ? DEV_URL : PROD_URL;
 
   const fetchData = () => {
     axios
