@@ -14,7 +14,7 @@ function App() {
   const host =
     process.env.NODE_ENV === 'development'
       ? 'localhost'
-      : 'damp-ocean-06468.herokuapp.com';
+      : 'serene-shelf-82506.herokuapp.com';
   const port = process.env.PORT || 8080;
 
   const fetchData = () => {
