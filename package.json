@@ -5,11 +5,6 @@
   "engines": {
     "node": "16.x"
   },
-  "browser": {
-    "fs": false,
-    "path": false,
-    "os": false
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -55,5 +50,9 @@
   },
   "devDependencies": {
     "concurrently": "^7.1.0"
+  },
+  "browser": {
+    "fs": false,
+    "os": false
   }
 }
