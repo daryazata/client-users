@@ -25,7 +25,7 @@
     "start": "node server",
     "server": "nodemon server",
     "client": "react-scripts start",
-    "dev": "concurrently \"npm run server\" \"npm run client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -50,9 +50,5 @@
   },
   "devDependencies": {
     "concurrently": "^7.1.0"
-  },
-  "browser": {
-    "fs": false,
-    "os": false
   }
 }
