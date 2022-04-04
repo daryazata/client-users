@@ -11,14 +11,14 @@ function App() {
 
   const selectRef = useRef(null);
 
-  const host =
+  const url =
     process.env.NODE_ENV === 'development'
-      ? 'localhost:8080'
-      : 'serene-shelf-82506.herokuapp.com';
+      ? process.env.REACT_BASE_URL
+      : process.env.HEROKU_URL;
 
   const fetchData = () => {
     axios
-      .get(`http://${host}/api/users`)
+      .get(`${url}/api/users`)
       .then(function (response) {
         const fetchedData = response.data.data.users.results;
         setUsers(fetchedData);
