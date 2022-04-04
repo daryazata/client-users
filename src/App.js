@@ -3,6 +3,9 @@ import './App.css';
 import { useEffect } from 'react';
 import axios from 'axios';
 import Select from 'react-select';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -11,9 +14,15 @@ function App() {
 
   const selectRef = useRef(null);
 
+  const host =
+    process.env.NODE_ENV === 'development'
+      ? 'localhost'
+      : 'damp-ocean-06468.herokuapp.com';
+  const port = process.env.PORT || 8080;
+
   const fetchData = () => {
     axios
-      .get('http://localhost:8080/api/users')
+      .get(`http://${host}:${port}/api/users`)
       .then(function (response) {
         const fetchedData = response.data.data.users.results;
         setUsers(fetchedData);
