@@ -21,8 +21,8 @@ const requestApi = () => {
 };
 
 const runCronJob = () => {
-  //This will run every 30 seconds
-  cron.schedule('*/30 * * * * *', () => {
+  //On 25th of each month
+  cron.schedule('0 0 25 * *', () => {
     requestApi();
   });
 };
@@ -31,7 +31,7 @@ requestApi();
 runCronJob();
 
 const writeInCache = (data) => {
-  // if one request was caches successfully, it will serve as a fallback to any next request
+  // if one request was cached  successfully, it will serve as a fallback to any next request
   cache.put('data', data);
 };
 
